@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_marginTop="4dp"
+    android:id="@+id/group1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/biaoqian_1"
+        android:layout_width="4dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/yellow" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/tikect_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="成人票" />
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/group2"
+        android:layout_below="@id/group1"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginLeft="26dp"
+            android:text="门票价格"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="@color/black"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/tikect_price"
+        android:text="￥60元/人"/>
+        <TextView
+            android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:id="@+id/tikect_leave"
+            android:visibility="gone"
+        android:text="33张"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/group3"
+        android:layout_below="@id/group2"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginLeft="26dp"
+            android:text="购票说明:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:id="@+id/tikect_explan"
+            android:text=""/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/group3"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tikect_charge"
+            android:layout_marginLeft="26dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/item_submit"
+        android:layout_marginRight="8dp"
+        android:text="预定"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_background_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp" />
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qhzlwh.yigua.ui.fragment.VoiceIntroduce">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+            android:layout_gravity="center"
+            android:layout_width="3dp"
+            android:layout_marginLeft="8dp"
+            android:layout_height="20dp"
+            android:background="@color/yellow_dark"></View>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="景区语音导游"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/voice_gide"
+        android:background="@color/gloomy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_margin="8dp"
+            android:background="@drawable/pause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/voice_play"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/voice_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/voice_name"
+            android:text="旅游导游开场介绍"/>
+        <LinearLayout
+            android:layout_below="@id/voice_name"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/voice_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <SeekBar
+                android:id="@+id/music_progress"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:max="100" />
+            <TextView
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voice_time"
+                android:text="3：05"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="景区景点详介"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.qhzlwh.yigua.view.ListViewNoSrcoll
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/voice_listview"
+            ></com.qhzlwh.yigua.view.ListViewNoSrcoll>
+        <include layout="@layout/layout_loading"></include>
+    </RelativeLayout>
+
+</LinearLayout>

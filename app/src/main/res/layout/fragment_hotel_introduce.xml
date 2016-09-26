@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qhzlwh.yigua.ui.fragment.HotelIntroduce">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+
+            android:layout_marginLeft="8dp"
+            android:layout_width="4dp"
+            android:layout_height="20dp"
+            android:background="@color/yellow_dark"/>
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="推荐美食"
+           />
+    </LinearLayout>
+    <com.qhzlwh.yigua.view.ListViewNoSrcoll
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hotel_listview_eat">
+
+    </com.qhzlwh.yigua.view.ListViewNoSrcoll>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+
+            android:layout_marginLeft="8dp"
+            android:layout_width="4dp"
+            android:layout_height="20dp"
+            android:background="@color/yellow_dark"/>
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="推荐土特产"
+            />
+        </LinearLayout>
+    <com.qhzlwh.yigua.view.ListViewNoSrcoll
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hotel_listview_good">
+    </com.qhzlwh.yigua.view.ListViewNoSrcoll>
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+
+            />
+    </LinearLayout>
+
+</LinearLayout>

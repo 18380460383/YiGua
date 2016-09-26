@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.qhzlwh.yigua.ui.fragment.FragmentTranvel">
+<LinearLayout
+    android:id="@+id/top_head"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:padding="4dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_left"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_background">
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/ic_search"/>
+        <EditText
+            android:textColorHint="@color/white"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:hint="请输入景点名称"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="@dimen/margin_left"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@mipmap/message"/>
+</LinearLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:layout_below="@id/top_head"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tranvel_recyclerview"
+    ></com.handmark.pulltorefresh.library.PullToRefreshListView>
+</RelativeLayout>

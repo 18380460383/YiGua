@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/search02"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="40dip"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup
+        android:id="@+id/id_stickynavlayout_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bac_radiogroup"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <RadioButton
+            android:id="@+id/radiobutton11"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/select_radiobutton_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="行程"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <RadioButton
+            android:id="@+id/radiobutton21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/select_radiobutton_left"
+            android:button="@null"
+            android:gravity="center"
+            android:text="报名须知"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14dp" />
+        <RadioButton
+            android:id="@+id/radiobutton31"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/select_radiobutton_left"
+            android:button="@null"
+            android:gravity="center"
+            android:text="路线点评"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14dp" />
+    </RadioGroup>
+</LinearLayout>

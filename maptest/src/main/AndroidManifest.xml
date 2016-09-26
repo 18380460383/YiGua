@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.uu.gaode">
+    <!-- //地图包、搜索包需要的基础权限 索包需要keytool -v -list -keystore keystore.jks-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+    <!--    <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a92a51a0eb38752fda197337d3224d85" />
+-->
+   <!--     <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+        <activity android:name=".ViewpagerTest" />
+        <activity android:name=".viewpager.MianActivity" />
+       <!-- <activity android:name=".RouteActivity" />-->
+        <activity android:name=".drive.DriveRouteDetailActivity" />
+        <activity android:name=".walk.WalkRouteDetailActivity" />
+        <activity android:name=".bus.BusRouteDetailActivity" />
+        <activity android:name=".location.LocationModeSourceActivity" />
+        <activity android:name=".screenshot.ScreenShotActivity" />
+        <activity android:name=".busline.BuslineActivity" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".markers.MarkerActivity"></activity>
+    </application>
+
+</manifest>

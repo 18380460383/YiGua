@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gloomy"
+    tools:context="com.qhzlwh.yigua.ui.fragment.RouteReviews">
+<include layout="@layout/layout_loading"/>
+<com.qhzlwh.yigua.view.ListViewNoSrcoll
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@null"
+    android:id="@+id/id_stickynavlayout_innerscrollview"
+    android:layout_margin="8dp">
+</com.qhzlwh.yigua.view.ListViewNoSrcoll>
+<!--
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/routereviews_listview"
+    android:layout_margin="8dp">
+-->
+
+<!--</ListView>-->
+</RelativeLayout>

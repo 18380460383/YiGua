@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--点击效果-->
+    <item android:state_pressed="true" android:drawable="@drawable/dailog_button_other_header_pass"></item>
+    <item android:state_pressed="false" android:drawable="@drawable/dailog_button_other_header"></item>
+</selector>

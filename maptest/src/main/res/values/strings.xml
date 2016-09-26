@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ViewpagerGaoDe1</string>
+    <string name="stop_animation">\u25A0</string>
+    <string name="animate">Animate</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+    <string name="gpsfollow">追随</string>
+    <string name="gpslocate">定位</string>
+    <string name="gpsrotate">旋转</string>
+    <string name="map_screenshot">地图截屏</string>
+    <string name="clear_map">Clear</string>
+    <string name="reset_map">Reset</string>
+    <string name="default_info_window">Default info window</string>
+    <string name="custom_info_contents">Custom info contents</string>
+    <string name="custom_info_window">Custom info window</string>
+</resources>

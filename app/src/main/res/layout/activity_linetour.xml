@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qhzlwh.yigua.ui.activity.Linetour"
+    >
+    <include android:id="@+id/top" layout="@layout/top_tilte"/>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:layout_below="@id/top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tranvel_recyclerview"
+            ></com.handmark.pulltorefresh.library.PullToRefreshListView>
+    </RelativeLayout>

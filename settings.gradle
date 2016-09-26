@@ -1,0 +1,2 @@
+include ':app', ':pingpp', ':pulltorefresh', ':multi-image-selector', ':material1', ':xanderpanel'
+project(':material1').projectDir = new File('material')

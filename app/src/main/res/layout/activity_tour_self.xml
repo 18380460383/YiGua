@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/parent_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gloomy"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/top"
+        layout="@layout/top_title_cricle" />
+    <com.qhzlwh.yigua.view.MyScrollViewL
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/id_stickynavlayout_topview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <ImageView
+                        android:id="@+id/top_head_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="100dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white" />
+
+                        <TextView
+
+                            android:id="@+id/top_head_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="100dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/group1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/head"
+                    android:background="@color/white">
+
+                    <View
+                        android:id="@+id/item_seperate"
+                        android:layout_width="@dimen/borad_width"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:background="@color/yellow" />
+
+                    <TextView
+                        android:id="@+id/item_short_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_toRightOf="@id/item_seperate"
+                        android:text=""
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/item_long_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/item_short_title"
+                        android:layout_margin="8dp"
+                        android:layout_toRightOf="@id/item_seperate"
+                        android:text=""
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/group2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/group1"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/group2_item1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/tour_type_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@mipmap/gather" />
+
+                        <TextView
+                            android:id="@+id/gather_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="集合地点：" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group2_item1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@mipmap/call" />
+
+                        <TextView
+                            android:id="@+id/contact_way"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="联系方式：" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/s_jr_ico" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/group3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/group2"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/group3_item1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="20dp"
+                            android:background="@color/yellow"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/group3_item1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:text="报名价格"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/item_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:text="报名价格：￥400/人"
+                            android:visibility="gone" />
+
+                        <com.qhzlwh.yigua.view.ListViewNoSrcoll
+                            android:id="@+id/item_listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"></com.qhzlwh.yigua.view.ListViewNoSrcoll>
+
+                        <TextView
+                            android:id="@+id/signup_explain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:text="报名说明"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/signup_explain_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:text="购票说明"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/signup"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/button_background"
+                        android:text="报名"
+                        android:visibility="gone" />
+                </RelativeLayout>
+                <include  android:id="@+id/radio" layout="@layout/tour_radio_item"/>
+                <RelativeLayout
+                    android:id="@+id/group4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_stickynavlayout_topview"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white">
+                    <RelativeLayout
+                        android:id="@+id/item_information_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <ImageView
+                            android:id="@+id/information"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="8dp"
+                            android:background="@mipmap/message1" />
+
+                        <TextView
+                            android:id="@+id/information_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/information"
+                            android:text="交通信息，酒店信息为参考信息，最终的交通，酒店信息以供应商家确认为准。" />
+                    </RelativeLayout>
+                    <FrameLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/item_information_content" />
+                </RelativeLayout>
+            </LinearLayout>
+            <include android:id="@+id/radio_top" layout="@layout/tour_radio_item_top"/>
+        </RelativeLayout>
+    </com.qhzlwh.yigua.view.MyScrollViewL>
+</LinearLayout>

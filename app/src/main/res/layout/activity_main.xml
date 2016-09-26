@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.qhzlwh.yigua.view.TourKitViewPager
+        android:id="@+id/pager"
+        android:layout_above="@+id/tabs"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_above="@+id/tabs"
+        android:layout_width="match_parent"
+        android:background="@color/tab_seprator"
+        android:layout_height="1px" />
+
+    <com.qhzlwh.yigua.view.PagerTab
+        android:id="@+id/tabs"
+        android:background="@color/tab_background"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+</RelativeLayout>

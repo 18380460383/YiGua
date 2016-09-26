@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#FFFFFF"/>
+    <corners android:radius="15dp"/>
+    <stroke
+        android:width="2dp"
+        android:color="#bfbfbf">
+    </stroke>
+</shape><!-- From: file:/D:/MyWorkPlace/YiGua2/OneSDK/res/drawable/com_taobao_tae_sdk_web_view_activity_sendfeedback_rounded_edittext.xml -->

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/biaoqian_1"
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/yellow" />
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/biaoqian_1"
+            android:text="景区介绍" />
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/short_description_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text=""
+        android:textSize="12dp" />
+    <WebView
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_show_long"></WebView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/biaoqian_2"
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/yellow" />
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/biaoqian_2"
+            android:text="实用信息" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/useful_information_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="按实际浮"
+        android:textSize="12dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/biaoqian_3"
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/yellow" />
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/biaoqian_3"
+            android:text="特别提醒" />
+        <LinearLayout
+            android:layout_below="@id/biaoqian_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/scenic_spot_detail_fragment_mustknow"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="游览须知："
+                android:textSize="12dp" />
+            <TextView
+                android:id="@+id/scenic_spot_detail_fragment_notice"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注意事项："
+                android:textSize="12dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/biaoqian_4"
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/yellow" />
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/biaoqian_4"
+            android:text="不可错过" />
+    </RelativeLayout>
+
+<com.qhzlwh.yigua.view.ListViewNoSrcoll
+    android:layout_marginTop="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scenic_spot_detail_fragment_listview">
+
+</com.qhzlwh.yigua.view.ListViewNoSrcoll>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/biaoqian_5"
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/yellow" />
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/biaoqian_5"
+            android:text="游记点评" />
+    </RelativeLayout>
+
+
+        <com.qhzlwh.yigua.view.ListViewNoSrcoll
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scenic_spot_detail_fragment_listview_charge">
+        </com.qhzlwh.yigua.view.ListViewNoSrcoll>
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gloomy"/>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:layout_centerInParent="true"
+           android:layout_marginTop="8dp"
+           android:gravity="center"
+           android:text="加载更多评论"
+           android:layout_width="200dp"
+           android:layout_height="32dp"
+           android:id="@+id/scenic_spot_detail_fragment_showall"/>
+   </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </RelativeLayout>
+
+</LinearLayout>

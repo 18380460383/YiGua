@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    //android:id="@+id/search02"
+-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dip"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup
+        android:id="@+id/id_stickynavlayout_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bac_radiogroup"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/introduce_radiobutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/select_radiobutton_left"
+            android:text="景区介绍"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:button="@null" />
+        <RadioButton
+            android:id="@+id/voice_radiobutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="语音介绍"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12dp"
+            android:background="@drawable/select_radiobutton_left"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/cate_radiobutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="酒店美食"
+            android:textSize="12dp"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/select_radiobutton_left"
+            android:layout_weight="1"
+            android:button="@null" />
+
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qhzlwh.yigua">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-permission-sdk-23 android:name="android.permission.NFC" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!--获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <!--允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="cfae85d4f10bc6cb4496dbfe043484ec" />
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".ui.activity.BaseActivity" />
+        <!-- 自驾游 -->
+        <activity android:name=".ui.activity.TourSelf" />
+        <!-- 订单填写 -->
+        <activity
+            android:name=".ui.activity.OrderWrite"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!-- 自驾游 -->
+        <activity android:name=".ui.activity.OrderAll" />
+        <!-- 自驾游 -->
+        <activity android:name=".ui.activity.OrderMessage" />
+        <!-- 定制游 -->
+        <activity
+            android:name=".ui.activity.CustomizationTour"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".ui.activity.Linetour" />
+        <!-- 精选景区 -->
+        <activity android:name=".ui.activity.ScenicSpots" />
+        <!-- 景区详情 -->
+        <activity android:name=".ui.activity.ScenicSpotsDetailsActivity" />
+        <!-- 城市下的景点 -->
+        <activity android:name=".ui.activity.HSencicPoint" />
+        <!-- 快捷登录 -->
+        <activity
+            android:name=".ui.activity.LoginFast"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!-- 景区更多评论 -->
+        <activity android:name=".ui.activity.ScenicCommentMore" />
+        <!-- 订单详情 -->
+        <activity android:name=".ui.activity.OrderInformation" />
+        <activity
+            android:name=".ui.activity.ClientSDKActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- Ping++ sdk -->
+        <activity
+            android:name="com.pingplusplus.android.PaymentActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信支付 sdk ，也是 Ping++ sdk 调用入口 -->
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+        <!-- 支付宝 sdk -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!-- 订单支付 -->
+        <activity android:name=".ui.activity.OrderPay" />
+        <!-- 常用旅客列表 -->
+        <activity android:name=".ui.activity.CommonTourUser" />
+        <!-- 添加旅客 -->
+        <activity android:name=".ui.activity.AddTourUser" />
+        <!-- 用户信息 -->
+        <activity android:name=".ui.activity.UserInformation" />
+        <!-- 选择使用票 -->
+        <activity android:name=".ui.activity.ChoiceTikect" />
+        <!-- 票的使用信息 -->
+        <activity android:name=".ui.activity.TikectUseMessage" />
+        <!-- 确定使用门票 -->
+        <activity android:name=".ui.activity.TikectUseSure" />
+        <!-- 我的评论 -->
+        <activity android:name=".ui.activity.MyComment" />
+        <!-- 二维码扫描 -->
+        <activity
+            android:name="com.karics.library.zxing.android.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.MyCollection" />
+        <activity android:name=".ui.activity.VoiceIntroduce" />
+        <activity android:name=".ui.activity.ListViewActivity" />
+        <activity
+            android:name=".ui.activity.OrderCharge"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity" />
+        <activity android:name=".ui.activity.OrderNoComment" />
+        <activity
+            android:name=".ui.activity.CityPickerActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".ui.activity.OrderWaitOut" />
+        <activity android:name=".ui.activity.OrderWaitPay" />
+        <activity
+            android:name="com.meiqia.meiqiasdk.activity.MQConversationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MQTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1105633127" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 导航测试 -->
+      <!--  <activity android:name="com.example.peng.maplibrary.NavigationInterfaceActivity"
+            android:screenOrientation="portrait">
+
+        </activity>-->
+   <!--     <activity android:name="com.example.uu.gaode.RouteActivity"
+            >
+
+        </activity>-->
+         <!--   <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+
+    </application>
+
+</manifest>
